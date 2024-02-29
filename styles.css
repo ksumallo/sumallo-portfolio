@@ -16,12 +16,6 @@ body {
     overflow-x: hidden;
 }
 
-a[selected] {
-    color: #303030;
-    background-color: white;
-
-}
-
 p {
     margin: 0;
     margin-bottom: 1rem;
@@ -48,6 +42,7 @@ h3 {
 }
 
 nav {
+    padding: 1rem;
     display: flex;
     align-items: center;
     justify-content: right;
@@ -60,12 +55,14 @@ nav {
     text-align: center;
     cursor: pointer;
     border: 2px solid transparent;
+    text-decoration: none;
 }
 
 .nav-button:hover {
     transition: all 0.3s;
     transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-    border: 2px solid white;
+    color: #303030;
+    background-color: white;
 }
 
 .icon-social {
@@ -223,6 +220,7 @@ nav {
     display: flex;
     width: 70%;
     margin: 0 auto;
+    margin-bottom: 4rem;
 }
 
 #skills-software, #skills-tech {
@@ -268,6 +266,7 @@ nav {
 .two-column, .two-column-r {
     margin: 0 auto;
     display: flex;
+    justify-content: space-evenly;
 }
 
 @media screen and (min-width: 961px) {
@@ -280,13 +279,15 @@ nav {
     }
     
     #about-me-wrapper {
-        width: 60%;
-        margin: 1rem auto;
-        padding: 1rem 1rem;
+        width: 70%;
+        margin: 0 auto 4rem auto;
+        padding: 1rem 3rem;
+        font-size: 1.1rem;
         background-color: rgba(25,25,25, 0.6);
         border: 3px solid rgba(0, 0, 0, 0.2);
         border-radius: 1.5rem;
         backdrop-filter: blur(20px);
+        box-sizing: border-box;
     }
     
     #skills-wrapper > div {
@@ -302,8 +303,9 @@ nav {
     }
     
     .two-column, .two-column-r {
-        width: 75%;
+        width: 70%;
         margin-bottom: 5rem;
+        gap: 2rem;
     }
 
     .project-showcase {
@@ -341,7 +343,7 @@ nav {
     
     #about-me-wrapper {
         width: 90%;
-        margin: 1rem auto;
+        margin: 0 auto 4rem auto;
         padding: 1rem 2rem;
         background-color: rgba(25,25,25, 0.6);
         border: 3px solid rgba(0, 0, 0, 0.2);
@@ -415,9 +417,22 @@ nav {
 }
 
 footer {
-    margin: 0;
+    width: 70%;
+    margin: 2rem auto;
     padding: 2rem;
-    background-color: black;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: rgba(25,25,25, 0.8);
+    border: 3px solid rgba(0, 0, 0, 0.2);
+    border-radius: 1.5rem;
+    box-sizing: border-box;
+}
+
+footer > a {
+    padding: 0.25rem;
+    color: #303030;
+    background: white;
+    text-decoration: none;
 }
